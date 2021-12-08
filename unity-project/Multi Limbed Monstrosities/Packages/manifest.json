@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.barracuda": "2.0.0",
     "com.unity.collab-proxy": "1.15.4",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.7",
@@ -40,6 +41,14 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
-  }
+    "com.unity.modules.xr": "1.0.0",
+    "jp.ikep.mediapipe.blazepose": "1.1.1"
+  },
+  "scopedRegistries": [
+    {
+      "name": "creativeikep",
+      "url": "https://registry.npmjs.com",
+      "scopes": ["jp.ikep"]
+    }
+  ]
 }
