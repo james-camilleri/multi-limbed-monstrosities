@@ -9,7 +9,8 @@ public class GenerateTargets : MonoBehaviour
 
   public int numberOfTargets = 3;
 
-  public Vector3 targetArea = new Vector3(10, 10, 5);
+  // public Vector3 targetArea = new Vector3(10, 10, 5);
+  public Vector3 targetArea = new Vector3(0, 0, 0);
 
   private List<GameObject> targets = new List<GameObject>();
 
