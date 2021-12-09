@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenerateTargets : MonoBehaviour
+public class ServerConfig : MonoBehaviour
 {
+  public bool isServer = false;
 
   public GameObject targetTemplate;
 
   public int numberOfTargets = 3;
 
-  // public Vector3 targetArea = new Vector3(10, 10, 5);
   public Vector3 targetArea = new Vector3(0, 0, 0);
 
   private List<GameObject> targets = new List<GameObject>();
@@ -19,22 +19,47 @@ public class GenerateTargets : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    for (int i = 0; i < numberOfTargets; i++)
-    {
-      Vector3 position = new Vector3(
-          Random.Range(-targetArea.x, targetArea.x),
-          Random.Range(-targetArea.y, targetArea.y),
-          Random.Range(START_Z, START_Z + targetArea.z)
-      );
-
-      GameObject target = Instantiate(targetTemplate, position, Quaternion.identity);
-      target.SetActive(true);
-      targets.Add(target);
-    }
+    GenerateTargets(isServer);
   }
 
   // Update is called once per frame
   void Update()
+  {
+    if (isServer)
+    {
+      MoveTargets();
+    }
+  }
+
+  void GenerateTargets(bool isServer)
+  {
+    for (int i = 0; i < numberOfTargets; i++)
+    {
+      Vector3 position = isServer ? new Vector3(
+          Random.Range(-targetArea.x, targetArea.x),
+          Random.Range(-targetArea.y, targetArea.y),
+          Random.Range(START_Z, START_Z + targetArea.z)
+      ) : new Vector3(0, 0, 0);
+
+      GameObject target = Instantiate(targetTemplate, position, Quaternion.identity);
+      target.SetActive(true);
+
+      if (isServer)
+      {
+        var sender = target.GetComponent<MqttPropertySender>();
+        sender._topic = "mlm/t/" + i;
+        sender.enabled = true;
+      }
+      else
+      {
+        var receiver = target.GetComponent<MqttEventReceiver>();
+        receiver.enabled = true;
+      }
+      targets.Add(target);
+    }
+  }
+
+  void MoveTargets()
   {
     targets.ForEach(target =>
     {

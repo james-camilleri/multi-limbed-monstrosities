@@ -13,7 +13,9 @@ public class MqttPropertySender : MonoBehaviour
 
   [SerializeField] Mqtt _mqtt;
   [SerializeField] int _framerate = 60;
-  [SerializeField] string _topic = "mlm/:bodypart";
+
+  // Just made this public. Sorry.
+  public string _topic = "mlm/:bodypart";
   [SerializeField] Component _dataSource = null;
   [SerializeField] string _propertyName = "";
   [SerializeField] bool _keepSending = false;
@@ -66,13 +68,12 @@ public class MqttPropertySender : MonoBehaviour
     if (_mqtt == null)
       _mqtt = GameObject.Find("MQTT Client").GetComponent<Mqtt>();
 
-    if (_playerNumber == 0)
+    if (_playerNumber == 0 && (_topic.IndexOf("/l") > 0 || _topic.IndexOf("/r") > 0))
     {
       var trackerOptions = GetComponentInParent<TrackerOptions>();
       _playerNumber = trackerOptions.playerNumber;
+      _topic = _topic + "/" + _playerNumber;
     }
-
-    _topic = _topic + "/" + _playerNumber;
 
     UpdateSettings();
   }

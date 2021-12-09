@@ -189,6 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691671beea0fc334893aa89fd3f806e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isServer: 1
   targetTemplate: {fileID: 1512118815}
   numberOfTargets: 3
   targetArea: {x: 1, y: 1, z: 1}
@@ -251,7 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8dada25433e834e90e7acc6232ae20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 1
+  playerNumber: 2
 --- !u!1 &281941622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,6 +1586,81 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2618665736949592689, guid: 9d1ef3ecf0075984b843c9fbd85cb29b, type: 3}
   m_PrefabInstance: {fileID: 2618665738193135698}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1512118831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512118815}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac167d9c8eb34c6eb5922934c514984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mqtt: {fileID: 0}
+  _framerate: 60
+  _topic: mlm/t/:target
+  _dataSource: {fileID: 1512118826}
+  _propertyName: position
+  _keepSending: 0
+--- !u!114 &1512118832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512118815}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4403ba8ea4e4300a4ca0e9e3aa23ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mqtt: {fileID: 0}
+  _topic: mlm/t/:target
+  _dataType: 9
+  _bytesReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _boolReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _intReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _floatReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _stringReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2IntReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3IntReceived:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector2Received:
+    m_PersistentCalls:
+      m_Calls: []
+  _vector3Received:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1512118826}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: set_localPosition
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _vector4Received:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1756321236 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4041640707504396157, guid: a33c87797ef4742a685a971405e31336, type: 3}
