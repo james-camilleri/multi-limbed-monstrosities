@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 416120449}
   - component: {fileID: 416120448}
   - component: {fileID: 416120447}
+  - component: {fileID: 416120452}
   m_Layer: 0
   m_Name: Tracker (r/1)
   m_TagString: Limb
@@ -501,6 +502,18 @@ Transform:
   m_Father: {fileID: 137454874}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &416120452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416120446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &505853300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,6 +584,7 @@ GameObject:
   - component: {fileID: 607106794}
   - component: {fileID: 607106793}
   - component: {fileID: 607106792}
+  - component: {fileID: 607106796}
   m_Layer: 0
   m_Name: Tracker (r/2)
   m_TagString: Limb
@@ -713,6 +727,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607106790}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &607106796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607106790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &751153703
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +752,7 @@ GameObject:
   - component: {fileID: 751153707}
   - component: {fileID: 751153706}
   - component: {fileID: 751153705}
+  - component: {fileID: 751153709}
   m_Layer: 0
   m_Name: Tracker (l/3)
   m_TagString: Limb
@@ -868,6 +895,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751153703}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &751153709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751153703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &765960174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1170,7 @@ GameObject:
   - component: {fileID: 966361666}
   - component: {fileID: 966361665}
   - component: {fileID: 966361664}
+  - component: {fileID: 966361668}
   m_Layer: 0
   m_Name: Tracker (l/2)
   m_TagString: Limb
@@ -1273,6 +1313,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966361662}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &966361668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966361662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141141294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1338,7 @@ GameObject:
   - component: {fileID: 1141141297}
   - component: {fileID: 1141141296}
   - component: {fileID: 1141141295}
+  - component: {fileID: 1141141300}
   m_Layer: 0
   m_Name: Tracker (l/1)
   m_TagString: Limb
@@ -1428,6 +1481,18 @@ Transform:
   m_Father: {fileID: 137454874}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1141141300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141141294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1234744116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,6 +1614,7 @@ GameObject:
   - component: {fileID: 1977669996}
   - component: {fileID: 1977669995}
   - component: {fileID: 1977669994}
+  - component: {fileID: 1977669998}
   m_Layer: 0
   m_Name: Tracker (r/3)
   m_TagString: Limb
@@ -1691,6 +1757,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977669992}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1977669998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977669992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2618665738193135698
 PrefabInstance:
   m_ObjectHideFlags: 0
