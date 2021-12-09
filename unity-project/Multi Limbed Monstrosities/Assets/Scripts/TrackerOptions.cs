@@ -12,7 +12,6 @@ public class TrackerOptions : MonoBehaviour
   void Awake()
   {
     playerNumber = playerConfig.GetComponent<PlayerConfig>().playerNumber;
-    Debug.Log("Player " + playerNumber);
   }
 
   // Update is called once per frame
