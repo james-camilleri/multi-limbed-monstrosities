@@ -959,7 +959,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 845381816886893856, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
       propertyPath: m_Name
-      value: TrackablePoint_HandLeft
+      value: TrackablePoint_HandRight
       objectReference: {fileID: 0}
     - target: {fileID: 845381816886893859, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
       propertyPath: m_RootOrder
@@ -1007,6 +1007,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
+--- !u!4 &3938851566087650468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5278682598337447403, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
+  m_PrefabInstance: {fileID: 9216679835178744143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6338224862899114472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2890709064389699751, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
+  m_PrefabInstance: {fileID: 9216679835178744143}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4635174464984875497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6338224862899114472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac167d9c8eb34c6eb5922934c514984, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mqtt: {fileID: 0}
+  _framerate: 60
+  _topic: mlm/r
+  _dataSource: {fileID: 3938851566087650468}
+  _propertyName: position
+  _keepSending: 0
 --- !u!4 &8382148003834340460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 845381816886893859, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
@@ -1021,7 +1049,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 845381816886893856, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
       propertyPath: m_Name
-      value: TrackablePoint_HandRight
+      value: TrackablePoint_HandLeft
       objectReference: {fileID: 0}
     - target: {fileID: 845381816886893859, guid: d2a399ce766552546aaab13903b3ac38, type: 3}
       propertyPath: m_RootOrder
@@ -1093,7 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mqtt: {fileID: 0}
   _framerate: 60
-  _topic: mlm/r
+  _topic: mlm/l
   _dataSource: {fileID: 3938851566381444323}
   _propertyName: position
   _keepSending: 0
