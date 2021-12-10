@@ -13,8 +13,6 @@ public class SetUpLimb : MonoBehaviour
   {
     position = this.gameObject.transform.position;
     this.gameObject.GetComponent<MeshRenderer>().enabled = false;
-
-    // config = GetComponent<ServerConfig>();
   }
 
   // Update is called once per frame
@@ -22,13 +20,9 @@ public class SetUpLimb : MonoBehaviour
   {
     if (this.gameObject.transform.position != position)
     {
-      // Debug.Log("limbTargets");
-      // Debug.Log(limbIndex);
-      // Debug.Log(config.limbTargets[limbIndex]);
       this.gameObject.GetComponent<MeshRenderer>().enabled = true;
       if (config.limbTargets[limbIndex] != null)
       {
-        Debug.Log("things are happening");
         config.limbTargets[limbIndex].transform.position = this.gameObject.transform.position;
       }
     }
