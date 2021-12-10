@@ -690,7 +690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e446d57de19b71549af379c147feca17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  limbIndex: 1
+  limbIndex: 0
   config: {fileID: 173303310}
 --- !u!4 &465198969 stripped
 Transform:
