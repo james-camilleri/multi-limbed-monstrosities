@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +12,8 @@ public class ServerConfig : MonoBehaviour
   public Vector3 targetArea = new Vector3(0, 0, 0);
 
   private List<GameObject> targets = new List<GameObject>();
+
+  public List<GameObject> limbTargets = new List<GameObject>();
 
   private const float START_Z = 50f;
 
